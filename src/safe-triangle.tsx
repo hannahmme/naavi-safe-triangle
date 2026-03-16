@@ -214,8 +214,8 @@ export function SafeTriangleOverlay(props: {
       <polygon
         points={points}
         style={{
-          fill: "var(--naavi-safe-triangle-fill, rgba(0, 120, 255, 0.15))",
-          stroke: "var(--naavi-safe-triangle-stroke, rgba(0, 120, 255, 0.5))",
+          fill: "var(--naavi-safe-triangle-fill, rgba(102, 51, 153, 0.15))",
+          stroke: "var(--naavi-safe-triangle-stroke, rgba(102, 51, 153, 0.5))",
           strokeWidth: 1,
         }}
       />

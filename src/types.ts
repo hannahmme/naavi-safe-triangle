@@ -76,7 +76,7 @@ export interface RootProps
   hideOnBlur?: boolean;
   /** Whether safe triangle hover zone is enabled. @default true */
   safeTriangle?: boolean;
-  /** Whether to render the debug safe triangle overlay. @default false */
+  /** Whether to render the debug safe triangle overlay with color. @default false */
   debugSafeTriangle?: boolean;
 }
 
