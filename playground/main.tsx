@@ -6,5 +6,9 @@ import { Store } from "./Store.tsx";
 const root = document.getElementById("root");
 if (!root) throw new Error("Missing #root element");
 
-const page = window.location.hash === "#store" ? <Store /> : <App />;
-createRoot(root).render(page);
+const Comp = () => {
+  if (window.location.hash.includes("#store")) return <Store />;
+  return <App />;
+};
+
+createRoot(root).render(<Comp />);

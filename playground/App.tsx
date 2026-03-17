@@ -60,7 +60,9 @@ export function App() {
                 </Trigger>
                 <Content aria-label="Campus Tours">
                   <Item value="for-prospective-students">
-                    <Link href="#for-prospective-students">For prospective students</Link>
+                    <Link href="#for-prospective-students">
+                      For prospective students
+                    </Link>
                   </Item>
                   <Item value="for-alumni">
                     <Link href="#for-alumni">For alumni</Link>
@@ -96,7 +98,9 @@ export function App() {
                     <Link href="#graduate">Graduate</Link>
                   </Item>
                   <Item value="professional-schools">
-                    <Link href="#professional-schools">Professional Schools</Link>
+                    <Link href="#professional-schools">
+                      Professional Schools
+                    </Link>
                   </Item>
                 </Content>
               </Item>
@@ -157,7 +161,8 @@ export function App() {
         <section>
           <h1 className="page-title">Mythical University</h1>
           <p className="content">
-            Navigate the menu above using keyboard or mouse to test the component.
+            Navigate the menu above using keyboard or mouse to test the
+            component.
           </p>
         </section>
       </div>

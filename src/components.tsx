@@ -337,6 +337,7 @@ export function Trigger({
         }
         const next = [...ctx.openPath.slice(0, depth), value];
         ctx.setOpenPath(next);
+        ctx.safeTriangle?.setOrigin(e.clientX, e.clientY);
       }
     },
     [ctx, value, depth, effectiveOpenOnHover],

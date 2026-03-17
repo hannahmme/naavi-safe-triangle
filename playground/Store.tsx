@@ -20,18 +20,14 @@ export function Store() {
         <List className="store-menubar">
           {/* Smykker — section with sub-sections */}
           <Item value="smykker">
-            <Trigger openOnHover href="#smykker">Smykker</Trigger>
+            <Trigger openOnHover href="#smykker">
+              Smykker
+            </Trigger>
             <Content
               aria-label="Smykker"
               className="store-mega store-grid-layout"
-              openOnHover
+              openOnHover={false}
             >
-              <Item value="back-smykker">
-                <Close className="store-back" target="current">
-                  <LeftArrow /> Smykker
-                </Close>
-              </Item>
-
               {/* Sub-section: Nyheter */}
               <Item value="nyheter">
                 <Trigger href="#nyheter">
@@ -59,11 +55,6 @@ export function Store() {
                   <Item value="nye-armband">
                     <Link href="#nye-armband">Nye armband</Link>
                   </Item>
-
-                  <li role="none" className="store-cards">
-                    <p className="store-cards-title">Nyheter i fokus</p>
-                    <div className="store-campaign-card">Kampanje</div>
-                  </li>
                 </Content>
               </Item>
 
@@ -76,6 +67,7 @@ export function Store() {
                 <Content
                   aria-label="Ringer"
                   className="store-mega store-grid-layout store-subcontent"
+                  openOnHover={false}
                 >
                   <Item value="back-ringer">
                     <Close className="store-back" target="current">
@@ -91,11 +83,6 @@ export function Store() {
                   <Item value="signetringer">
                     <Link href="#signetringer">Signetringer</Link>
                   </Item>
-
-                  <li role="none" className="store-cards">
-                    <p className="store-cards-title">Ringer i fokus</p>
-                    <div className="store-campaign-card">Kampanje</div>
-                  </li>
                 </Content>
               </Item>
 
@@ -108,6 +95,7 @@ export function Store() {
                 <Content
                   aria-label="Kjeder"
                   className="store-mega store-grid-layout store-subcontent"
+                  openOnHover={false}
                 >
                   <Item value="back-kjeder">
                     <Close className="store-back" target="current">
@@ -123,11 +111,6 @@ export function Store() {
                   <Item value="anheng">
                     <Link href="#anheng">Anheng</Link>
                   </Item>
-
-                  <li role="none" className="store-cards">
-                    <p className="store-cards-title">Kjeder i fokus</p>
-                    <div className="store-campaign-card">Kampanje</div>
-                  </li>
                 </Content>
               </Item>
 
@@ -140,6 +123,7 @@ export function Store() {
                 <Content
                   aria-label="Oredobber"
                   className="store-mega store-grid-layout store-subcontent"
+                  openOnHover={false}
                 >
                   <Item value="back-oredobber">
                     <Close className="store-back" target="current">
@@ -155,11 +139,6 @@ export function Store() {
                   <Item value="creoler">
                     <Link href="#creoler">Creoler</Link>
                   </Item>
-
-                  <li role="none" className="store-cards">
-                    <p className="store-cards-title">Oredobber i fokus</p>
-                    <div className="store-campaign-card">Kampanje</div>
-                  </li>
                 </Content>
               </Item>
 
@@ -179,29 +158,18 @@ export function Store() {
               <Item value="til-barn">
                 <Link href="#til-barn">Til barn</Link>
               </Item>
-
-              {/* Campaign cards */}
-              <li role="none" className="store-cards">
-                <p className="store-cards-title">Se vare kampanjer innen smykker</p>
-                <div className="store-campaign-card">Kampanje 1</div>
-                <div className="store-campaign-card">Kampanje 2</div>
-              </li>
             </Content>
           </Item>
 
           {/* Klokker — section with only links */}
           <Item value="klokker">
-            <Trigger openOnHover href="#klokker">Klokker</Trigger>
+            <Trigger openOnHover href="#klokker">
+              Klokker
+            </Trigger>
             <Content
               aria-label="Klokker"
               className="store-mega store-grid-layout"
-              openOnHover
             >
-              <Item value="back-klokker">
-                <Close className="store-back" target="current">
-                  <LeftArrow /> Klokker
-                </Close>
-              </Item>
               <Item value="herrer-klokker">
                 <Link href="#herrer-klokker">Herreklokker</Link>
               </Item>
@@ -211,27 +179,18 @@ export function Store() {
               <Item value="smartklokker">
                 <Link href="#smartklokker">Smartklokker</Link>
               </Item>
-
-              <li role="none" className="store-cards">
-                <p className="store-cards-title">Klokker i fokus</p>
-                <div className="store-campaign-card">Kampanje</div>
-              </li>
             </Content>
           </Item>
 
           {/* Anledninger — section with only links */}
           <Item value="anledninger">
-            <Trigger openOnHover href="#anledninger">Anledninger</Trigger>
+            <Trigger openOnHover href="#anledninger">
+              Anledninger
+            </Trigger>
             <Content
               aria-label="Anledninger"
               className="store-mega store-grid-layout"
-              openOnHover
             >
-              <Item value="back-anledninger">
-                <Close className="store-back" target="current">
-                  <LeftArrow /> Anledninger
-                </Close>
-              </Item>
               <Item value="bryllup">
                 <Link href="#bryllup">Bryllup</Link>
               </Item>
@@ -244,11 +203,6 @@ export function Store() {
               <Item value="jul">
                 <Link href="#jul">Jul</Link>
               </Item>
-
-              <li role="none" className="store-cards">
-                <p className="store-cards-title">Gaver til enhver anledning</p>
-                <div className="store-campaign-card">Gaveguide</div>
-              </li>
             </Content>
           </Item>
 

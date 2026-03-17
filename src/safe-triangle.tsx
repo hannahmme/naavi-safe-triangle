@@ -121,6 +121,7 @@ function resolveTargetRect(contentEl: HTMLElement): DOMRect {
 export interface SafeTriangleAPI {
   isInsideTriangle: (x: number, y: number) => boolean;
   setContentEl: (value: string, el: HTMLElement | null) => void;
+  setOrigin: (x: number, y: number) => void;
   updateCursor: (x: number, y: number) => void;
   enabled: boolean;
 }
@@ -137,6 +138,7 @@ export function useSafeTriangle(opts: {
 }): UseSafeTriangleResult {
   const { enabled, openPath, debug = false } = opts;
   const contentEls = useRef<Map<string, HTMLElement>>(new Map());
+  const originRef = useRef<Point | null>(null);
   const [triangle, setTriangle] = useState<[Point, Point, Point] | null>(null);
 
   const setContentEl = useCallback(
@@ -149,6 +151,16 @@ export function useSafeTriangle(opts: {
     },
     [],
   );
+
+  /**
+   * Store the cursor position when content opens. This fixed "origin"
+   * point becomes the triangle apex so that later `isInsideTriangle`
+   * checks test whether the *new* cursor position falls inside the
+   * path from the origin to the open content.
+   */
+  const setOrigin = useCallback((x: number, y: number) => {
+    originRef.current = { x, y };
+  }, []);
 
   // Find the deepest open content element based on openPath
   const getDeepestContentEl = useCallback((): HTMLElement | null => {
@@ -165,12 +177,15 @@ export function useSafeTriangle(opts: {
     (x: number, y: number): boolean => {
       if (!enabled || openPath.length === 0) return false;
 
+      const origin = originRef.current;
+      if (!origin) return false;
+
       const deepestEl = getDeepestContentEl();
       if (!deepestEl) return false;
 
       const rect = resolveTargetRect(deepestEl);
-      const tri = computeTrianglePoints(x, y, rect);
-      if (!tri) return false; // cursor inside content rect
+      const tri = computeTrianglePoints(origin.x, origin.y, rect);
+      if (!tri) return false; // origin inside content rect
 
       return pointInTriangle(x, y, tri[0].x, tri[0].y, tri[1].x, tri[1].y, tri[2].x, tri[2].y);
     },
@@ -178,20 +193,21 @@ export function useSafeTriangle(opts: {
   );
 
   const updateCursor = useCallback(
-    (x: number, y: number) => {
+    (_x: number, _y: number) => {
       if (!debug || !enabled || openPath.length === 0) {
         setTriangle(null);
         return;
       }
 
+      const origin = originRef.current;
       const deepestEl = getDeepestContentEl();
-      if (!deepestEl) {
+      if (!deepestEl || !origin) {
         setTriangle(null);
         return;
       }
 
       const rect = resolveTargetRect(deepestEl);
-      const tri = computeTrianglePoints(x, y, rect);
+      const tri = computeTrianglePoints(origin.x, origin.y, rect);
       setTriangle(tri);
     },
     [debug, enabled, openPath, getDeepestContentEl],
@@ -199,8 +215,8 @@ export function useSafeTriangle(opts: {
 
   // Stable API object — does not change when triangle state changes
   const api = useMemo(
-    () => ({ isInsideTriangle, setContentEl, updateCursor, enabled }),
-    [isInsideTriangle, setContentEl, updateCursor, enabled],
+    () => ({ isInsideTriangle, setContentEl, setOrigin, updateCursor, enabled }),
+    [isInsideTriangle, setContentEl, setOrigin, updateCursor, enabled],
   );
 
   return { api, triangle };
