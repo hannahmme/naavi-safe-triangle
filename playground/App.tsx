@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   Root,
   List,
@@ -7,8 +8,21 @@ import {
   Link,
   Separator,
 } from "../src/index.ts";
+import { Store } from "./Store.tsx";
 
 export function App() {
+  const [page, setPage] = useState(window.location.hash);
+
+  useEffect(() => {
+    const onHashChange = () => setPage(window.location.hash);
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
+
+  if (page === "#store") {
+    return <Store />;
+  }
+
   return (
     <div className="page">
       <header>

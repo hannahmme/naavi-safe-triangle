@@ -18,249 +18,249 @@ export function Store() {
 
       <Root aria-label="Store navigation" debugSafeTriangle openOnHover>
         <List className="store-menubar">
-          {/* Smykker — section with sub-sections */}
-          <Item value="smykker">
-            <Trigger openOnHover href="#smykker">Smykker</Trigger>
+          {/* Jewelry — section with sub-sections */}
+          <Item value="jewelry">
+            <Trigger openOnHover href="#jewelry">Jewelry</Trigger>
             <Content
-              aria-label="Smykker"
+              aria-label="Jewelry"
               className="store-mega store-grid-layout"
               openOnHover
             >
-              <Item value="back-smykker">
+              <Item value="back-jewelry">
                 <Close className="store-back" target="current">
-                  <LeftArrow /> Smykker
+                  <LeftArrow /> Jewelry
                 </Close>
               </Item>
 
-              {/* Sub-section: Nyheter */}
-              <Item value="nyheter">
-                <Trigger href="#nyheter">
-                  Nyheter
+              {/* Sub-section: New Arrivals */}
+              <Item value="new-arrivals">
+                <Trigger href="#new-arrivals">
+                  New Arrivals
                   <RightArrow />
                 </Trigger>
                 <Content
-                  aria-label="Nyheter"
+                  aria-label="New Arrivals"
                   className="store-mega store-grid-layout store-subcontent"
                 >
-                  <Item value="back-nyheter">
+                  <Item value="back-new-arrivals">
                     <Close className="store-back" target="current">
-                      <LeftArrow /> Nyheter
+                      <LeftArrow /> New Arrivals
                     </Close>
                   </Item>
-                  <Item value="nye-ringer">
-                    <Link href="#nye-ringer">Nye ringer</Link>
+                  <Item value="new-rings">
+                    <Link href="#new-rings">New Rings</Link>
                   </Item>
-                  <Item value="nye-kjeder">
-                    <Link href="#nye-kjeder">Nye kjeder</Link>
+                  <Item value="new-necklaces">
+                    <Link href="#new-necklaces">New Necklaces</Link>
                   </Item>
-                  <Item value="nye-oredobber">
-                    <Link href="#nye-oredobber">Nye oredobber</Link>
+                  <Item value="new-earrings">
+                    <Link href="#new-earrings">New Earrings</Link>
                   </Item>
-                  <Item value="nye-armband">
-                    <Link href="#nye-armband">Nye armband</Link>
+                  <Item value="new-bracelets">
+                    <Link href="#new-bracelets">New Bracelets</Link>
                   </Item>
 
                   <li role="none" className="store-cards">
-                    <p className="store-cards-title">Nyheter i fokus</p>
-                    <div className="store-campaign-card">Kampanje</div>
+                    <p className="store-cards-title">New Arrivals in Focus</p>
+                    <div className="store-campaign-card">Promotion</div>
                   </li>
                 </Content>
               </Item>
 
-              {/* Sub-section: Ringer */}
-              <Item value="ringer">
-                <Trigger href="#ringer">
-                  Ringer
+              {/* Sub-section: Rings */}
+              <Item value="rings">
+                <Trigger href="#rings">
+                  Rings
                   <RightArrow />
                 </Trigger>
                 <Content
-                  aria-label="Ringer"
+                  aria-label="Rings"
                   className="store-mega store-grid-layout store-subcontent"
                 >
-                  <Item value="back-ringer">
+                  <Item value="back-rings">
                     <Close className="store-back" target="current">
-                      <LeftArrow /> Ringer
+                      <LeftArrow /> Rings
                     </Close>
                   </Item>
-                  <Item value="forlovelsesringer">
-                    <Link href="#forlovelsesringer">Forlovelsesringer</Link>
+                  <Item value="engagement-rings">
+                    <Link href="#engagement-rings">Engagement Rings</Link>
                   </Item>
-                  <Item value="gifteringer">
-                    <Link href="#gifteringer">Gifteringer</Link>
+                  <Item value="wedding-rings">
+                    <Link href="#wedding-rings">Wedding Rings</Link>
                   </Item>
-                  <Item value="signetringer">
-                    <Link href="#signetringer">Signetringer</Link>
+                  <Item value="signet-rings">
+                    <Link href="#signet-rings">Signet Rings</Link>
                   </Item>
 
                   <li role="none" className="store-cards">
-                    <p className="store-cards-title">Ringer i fokus</p>
-                    <div className="store-campaign-card">Kampanje</div>
+                    <p className="store-cards-title">Rings in Focus</p>
+                    <div className="store-campaign-card">Promotion</div>
                   </li>
                 </Content>
               </Item>
 
-              {/* Sub-section: Kjeder */}
-              <Item value="kjeder">
-                <Trigger href="#kjeder">
-                  Kjeder
+              {/* Sub-section: Necklaces */}
+              <Item value="necklaces">
+                <Trigger href="#necklaces">
+                  Necklaces
                   <RightArrow />
                 </Trigger>
                 <Content
-                  aria-label="Kjeder"
+                  aria-label="Necklaces"
                   className="store-mega store-grid-layout store-subcontent"
                 >
-                  <Item value="back-kjeder">
+                  <Item value="back-necklaces">
                     <Close className="store-back" target="current">
-                      <LeftArrow /> Kjeder
+                      <LeftArrow /> Necklaces
                     </Close>
                   </Item>
-                  <Item value="gullkjeder">
-                    <Link href="#gullkjeder">Gullkjeder</Link>
+                  <Item value="gold-necklaces">
+                    <Link href="#gold-necklaces">Gold Necklaces</Link>
                   </Item>
-                  <Item value="solvkjeder">
-                    <Link href="#solvkjeder">Solvkjeder</Link>
+                  <Item value="silver-necklaces">
+                    <Link href="#silver-necklaces">Silver Necklaces</Link>
                   </Item>
-                  <Item value="anheng">
-                    <Link href="#anheng">Anheng</Link>
+                  <Item value="pendants">
+                    <Link href="#pendants">Pendants</Link>
                   </Item>
 
                   <li role="none" className="store-cards">
-                    <p className="store-cards-title">Kjeder i fokus</p>
-                    <div className="store-campaign-card">Kampanje</div>
+                    <p className="store-cards-title">Necklaces in Focus</p>
+                    <div className="store-campaign-card">Promotion</div>
                   </li>
                 </Content>
               </Item>
 
-              {/* Sub-section: Oredobber */}
-              <Item value="oredobber">
-                <Trigger href="#oredobber">
-                  Oredobber
+              {/* Sub-section: Earrings */}
+              <Item value="earrings">
+                <Trigger href="#earrings">
+                  Earrings
                   <RightArrow />
                 </Trigger>
                 <Content
-                  aria-label="Oredobber"
+                  aria-label="Earrings"
                   className="store-mega store-grid-layout store-subcontent"
                 >
-                  <Item value="back-oredobber">
+                  <Item value="back-earrings">
                     <Close className="store-back" target="current">
-                      <LeftArrow /> Oredobber
+                      <LeftArrow /> Earrings
                     </Close>
                   </Item>
-                  <Item value="stikkers">
-                    <Link href="#stikkers">Stikkers</Link>
+                  <Item value="studs">
+                    <Link href="#studs">Studs</Link>
                   </Item>
-                  <Item value="hengende">
-                    <Link href="#hengende">Hengende</Link>
+                  <Item value="drop-earrings">
+                    <Link href="#drop-earrings">Drop Earrings</Link>
                   </Item>
-                  <Item value="creoler">
-                    <Link href="#creoler">Creoler</Link>
+                  <Item value="hoops">
+                    <Link href="#hoops">Hoops</Link>
                   </Item>
 
                   <li role="none" className="store-cards">
-                    <p className="store-cards-title">Oredobber i fokus</p>
-                    <div className="store-campaign-card">Kampanje</div>
+                    <p className="store-cards-title">Earrings in Focus</p>
+                    <div className="store-campaign-card">Promotion</div>
                   </li>
                 </Content>
               </Item>
 
               {/* Plain links */}
-              <Item value="armband">
-                <Link href="#armband">Armband</Link>
+              <Item value="bracelets">
+                <Link href="#bracelets">Bracelets</Link>
               </Item>
 
               <Separator />
 
-              <Item value="bunadssolv">
-                <Link href="#bunadssolv">Bunadssolv</Link>
+              <Item value="traditional-silver">
+                <Link href="#traditional-silver">Traditional Silver</Link>
               </Item>
-              <Item value="til-herre">
-                <Link href="#til-herre">Til herre</Link>
+              <Item value="for-him">
+                <Link href="#for-him">For Him</Link>
               </Item>
-              <Item value="til-barn">
-                <Link href="#til-barn">Til barn</Link>
+              <Item value="for-kids">
+                <Link href="#for-kids">For Kids</Link>
               </Item>
 
               {/* Campaign cards */}
               <li role="none" className="store-cards">
-                <p className="store-cards-title">Se vare kampanjer innen smykker</p>
-                <div className="store-campaign-card">Kampanje 1</div>
-                <div className="store-campaign-card">Kampanje 2</div>
+                <p className="store-cards-title">See our jewelry promotions</p>
+                <div className="store-campaign-card">Promotion 1</div>
+                <div className="store-campaign-card">Promotion 2</div>
               </li>
             </Content>
           </Item>
 
-          {/* Klokker — section with only links */}
-          <Item value="klokker">
-            <Trigger openOnHover href="#klokker">Klokker</Trigger>
+          {/* Watches — section with only links */}
+          <Item value="watches">
+            <Trigger openOnHover href="#watches">Watches</Trigger>
             <Content
-              aria-label="Klokker"
+              aria-label="Watches"
               className="store-mega store-grid-layout"
               openOnHover
             >
-              <Item value="back-klokker">
+              <Item value="back-watches">
                 <Close className="store-back" target="current">
-                  <LeftArrow /> Klokker
+                  <LeftArrow /> Watches
                 </Close>
               </Item>
-              <Item value="herrer-klokker">
-                <Link href="#herrer-klokker">Herreklokker</Link>
+              <Item value="mens-watches">
+                <Link href="#mens-watches">Men's Watches</Link>
               </Item>
-              <Item value="dameklokker">
-                <Link href="#dameklokker">Dameklokker</Link>
+              <Item value="womens-watches">
+                <Link href="#womens-watches">Women's Watches</Link>
               </Item>
-              <Item value="smartklokker">
-                <Link href="#smartklokker">Smartklokker</Link>
+              <Item value="smart-watches">
+                <Link href="#smart-watches">Smart Watches</Link>
               </Item>
 
               <li role="none" className="store-cards">
-                <p className="store-cards-title">Klokker i fokus</p>
-                <div className="store-campaign-card">Kampanje</div>
+                <p className="store-cards-title">Watches in Focus</p>
+                <div className="store-campaign-card">Promotion</div>
               </li>
             </Content>
           </Item>
 
-          {/* Anledninger — section with only links */}
-          <Item value="anledninger">
-            <Trigger openOnHover href="#anledninger">Anledninger</Trigger>
+          {/* Occasions — section with only links */}
+          <Item value="occasions">
+            <Trigger openOnHover href="#occasions">Occasions</Trigger>
             <Content
-              aria-label="Anledninger"
+              aria-label="Occasions"
               className="store-mega store-grid-layout"
               openOnHover
             >
-              <Item value="back-anledninger">
+              <Item value="back-occasions">
                 <Close className="store-back" target="current">
-                  <LeftArrow /> Anledninger
+                  <LeftArrow /> Occasions
                 </Close>
               </Item>
-              <Item value="bryllup">
-                <Link href="#bryllup">Bryllup</Link>
+              <Item value="wedding">
+                <Link href="#wedding">Wedding</Link>
               </Item>
-              <Item value="konfirmasjon">
-                <Link href="#konfirmasjon">Konfirmasjon</Link>
+              <Item value="confirmation">
+                <Link href="#confirmation">Confirmation</Link>
               </Item>
-              <Item value="bursdag">
-                <Link href="#bursdag">Bursdag</Link>
+              <Item value="birthday">
+                <Link href="#birthday">Birthday</Link>
               </Item>
-              <Item value="jul">
-                <Link href="#jul">Jul</Link>
+              <Item value="christmas">
+                <Link href="#christmas">Christmas</Link>
               </Item>
 
               <li role="none" className="store-cards">
-                <p className="store-cards-title">Gaver til enhver anledning</p>
-                <div className="store-campaign-card">Gaveguide</div>
+                <p className="store-cards-title">Gifts for Every Occasion</p>
+                <div className="store-campaign-card">Gift Guide</div>
               </li>
             </Content>
           </Item>
 
-          {/* Merker — plain link */}
-          <Item value="merker">
-            <Link href="#merker">Merker</Link>
+          {/* Brands — plain link */}
+          <Item value="brands">
+            <Link href="#brands">Brands</Link>
           </Item>
         </List>
       </Root>
 
       <div className="store-main">
-        <h1>Velkommen</h1>
+        <h1>Welcome</h1>
         <p>Hover the menu above to see the safe triangle in action.</p>
       </div>
     </div>
